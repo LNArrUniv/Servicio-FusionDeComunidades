@@ -1,5 +1,7 @@
 package controladores;
 
+import static java.lang.Thread.sleep;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -42,7 +44,7 @@ public class FusionController implements Handler {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         String comunidadesEndpoint = "https://tpa-dds.onrender.com/comunidades/obtenerTodas";
-
+        sleep(500);
         try {
             // Realiza una solicitud HTTP GET para obtener las comunidades desde el sistema
             HttpClient httpClient = HttpClient.newHttpClient();
