@@ -41,7 +41,7 @@ public class FusionController implements Handler {
     private void handleGenerarPosiblesFusiones(Context ctx) throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
-        String comunidadesEndpoint = "http://localhost:8080/comunidades/obtenerTodas";
+        String comunidadesEndpoint = "https://tpa-dds.onrender.com/comunidades/obtenerTodas";
 
         try {
             // Realiza una solicitud HTTP GET para obtener las comunidades desde el sistema
